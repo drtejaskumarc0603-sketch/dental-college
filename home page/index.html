@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RRDCH - Home</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- 🔷 NAVBAR -->
+<header>
+
+<!-- 🔷 TOP HEADER -->
+<div class="top-header">
+
+ <div class="logo-section">
+  <img src="images/image.png" alt="RRDCH Logo">
+  <div>
+    <h2 id="collegeName">Rajarajeshwari Dental College</h2>
+    <p id="collegeSub">& Hospital</p>
+  </div>
+</div>
+
+  <!-- CENTER CTA -->
+  <div class="header-cta">
+
+  <a href="../appoinment page/appoiment.html" class="appointment-btn" id ="appo">
+  Book Appointment
+</a>
+  </div>
+
+  <!-- RIGHT -->
+ <div class="top-info">
+  <span id="phoneText">📞 +91 9876543210</span>
+  <span id="locationText" href="location.html">📍 Bangalore</span>
+  <button id="langToggle">ಕನ್ನಡ</button>
+</div>
+</div>
+  <!-- 🔵 MAIN NAVBAR -->
+  <nav class="navbar">
+
+  <!-- 🍔 HAMBURGER -->
+  <div class="hamburger" onclick="toggleMenu()">
+    ☰
+  </div>
+
+  <!-- MENU -->
+<ul class="nav-links" id="navLinks">
+
+  <li><a id="navHome" href="../home page/index.html">Home</a></li>
+
+  <!-- ABOUT -->
+<li class="dropdown" id="aboutDropdown">
+  <a href="../about page/about.html" >About ▾</a>
+
+  <ul class="dropdown-menu">
+    <li><a href="../about page/about.html">Overview</a></li>
+    <li><a href="#">Vision & Mission</a></li>
+    <li><a href="#">Achievements</a></li>
+  </ul>
+</li>
+  <!-- DEPARTMENTS -->
+  <li class="mega">
+    <a id="navDept" href="../department page/department.html">Departments ▾</a>
+
+    <div class="mega-menu">
+      <div>
+        <h4 id="clinicalTitle">Clinical</h4>
+        <a id="oralSurgery" href="#">Oral Surgery</a>
+        <a id="ortho" href="#">Orthodontics</a>
+        <a id="perio" href="#">Periodontics</a>
+      </div>
+
+      <div>
+        <h4 id="specializedTitle">Specialized</h4>
+        <a id="prostho" href="#">Prosthodontics</a>
+        <a id="endo" href="#">Endodontics</a>
+        <a id="pedo" href="#">Pediatric Dentistry</a>
+      </div>
+    </div>
+  </li>
+
+  <!-- ADMISSIONS -->
+  <li class="dropdown">
+    <a id="navAdmissions" href="#">Admissions ▾</a>
+    <ul class="dropdown-menu">
+      <li><a id="navCourses" href="#">Courses</a></li>
+      <li><a id="navEligibility" href="#">Eligibility</a></li>
+      <li><a id="navApply" href="#">Apply Now</a></li>
+    </ul>
+  </li>
+
+  <!-- STUDENTS -->
+  <li class="dropdown">
+    <a id="navStudents" href="#">Students ▾</a>
+    <ul class="dropdown-menu">
+      <li><a id="navTimetable" href="#">Timetable</a></li>
+      <li><a id="navSyllabus" href="#">Syllabus</a></li>
+      <li><a id="navEvents" href="#">Events</a></li>
+    </ul>
+  </li>
+
+  <li><a id="navPatients" href="#">Patients</a></li>
+  <li><a id="navContact" href="#">Contact</a></li>
+
+<li class="menu-toggle">
+  <button onclick="toggleMainMenu()">☰</button>
+
+  <div id="mainMenu" class="main-menu hidden">
+
+    <a href="../home page/index.html">Home</a>
+    <a href="../about page/about.html">About</a>
+    <a href="../department page/department.html">Departments</a>
+    <a href="#">Admissions</a>
+    <a href="#">Students</a>
+    <a href="#">Doctors</a>
+    <a href="#">Patients</a>
+    <a href="#">Contact</a>
+    <a href="../location page/location.html">Location</a>
+
+  </div>
+</li>
+
+    
+  
+</nav>
+
+</header>
+
+<!-- 🏥 HERO SECTION -->
+<section class="hero">
+
+  <!-- SLIDES -->
+  <div class="hero-slider">
+
+    <div class="slide active" style="background-image: url('images/c8c4f8df37ea4a2fa025caad516dd8be.jpg');"></div>
+    <div class="slide" style="background-image: url('images/Management-quota-admission-in-Rajarajeswari-Dental-College-and-Hospital-Bangalore.jpg');"></div>
+    <div class="slide" style="background-image: url('images/2e63bc73d3b74711809f29550fea647a.jpg');"></div>
+     <div class="slide" style="background-image: url('images/hold.jpg');"></div>
+ <div class="slide" style="background-image: url('images/1470222053DSC0258.webp');"></div>
+
+  </div>
+
+  <!-- OVERLAY CONTENT -->
+  <div class="hero-text">
+    <h1 id="title">Rajarajeshwari Dental College & Hospital</h1>
+    <p id="subtitle">Excellence in Dental Education & Healthcare</p>
+
+    <div class="hero-buttons">
+      <a href="../appoinment page/appoiment.html " class="btn glass" id="appoi" >Book Appointment</a>
+      <button class="btn-outline glass">Virtual Tour</button>
+    </div>
+  </div>
+
+  <!-- ARROWS -->
+  <div class="arrow left" onclick="prevSlide()">❮</div>
+  <div class="arrow right" onclick="nextSlide()">❯</div>
+
+  <!-- DOTS -->
+  <div class="dots" id="dots"></div>
+
+</section>
+
+<!-- 🦷 DEPARTMENTS -->
+<section class="departments">
+
+  <h2 class="section-title">Explore Our Departments</h2>
+
+  <div class="dept-container">
+
+    <!-- CARD -->
+    <div class="dept-card">
+      <img src="images/ortho.jpg" alt="">
+      <div class="overlay">
+        <h3>Orthodontics</h3>
+        <p>Braces & smile correction</p>
+        <button onclick="openDept('Orthodontics')">Know More</button>
+      </div>
+    </div>
+
+    <div class="dept-card">
+      <img src="images/oral srg.jpg" alt="">
+      <div class="overlay">
+        <h3>Oral Surgery</h3>
+        <p>Advanced dental surgeries</p>
+        <button onclick="openDept('Oral Surgery')">Know More</button>
+      </div>
+    </div>
+
+    <div class="dept-card">
+      <img src="images/prostho.jpeg" alt="">
+      <div class="overlay">
+        <h3>Prosthodontics</h3>
+        <p>Tooth replacement</p>
+        <button onclick="openDept('Prosthodontics')">Know More</button>
+      </div>
+    </div>
+
+    <div class="dept-card">
+      <img src="images/perio.jpg" alt="">
+      <div class="overlay">
+        <h3>Periodontics</h3>
+        <p>Gum treatments</p>
+        <button onclick="openDept('Periodontics')">Know More</button>
+      </div>
+    </div>
+
+  </div>
+  <div class="dept-cta">
+  <a href="../department page/department.html" class="dept-btn">
+    Know More About Departments →
+  </a>
+</div>
+
+</section>
+</section>
+
+
+
+<!-- 🏆 ACHIEVEMENTS/////////////////////////////////////////////////////////////////////////////// -->
+<section class="achievements">
+<section class="achievements">
+
+  <h2 class="section-title">Our Achievements</h2>
+
+  <div class="achieve-container">
+
+    <!-- CARD 1 -->
+    <div class="achieve-card">
+      <img src="images/achiv1.jpg" alt="">
+      <h3>University Ranks</h3>
+      <p>Top ranks & gold medals in RGUHS exams.</p>
+      <button onclick="openModal('rank')">Know More</button>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="achieve-card">
+      <img src="images/achi2.jpg" alt="">
+      <h3>Research Excellence</h3>
+      <p>ICMR grants & national publications.</p>
+      <button onclick="openModal('research')">Know More</button>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="achieve-card">
+      <img src="images/achiv3.jpg" alt="">
+      <h3>Infrastructure</h3>
+      <p>Advanced clinics with modern equipment.</p>
+      <button onclick="openModal('infra')">Know More</button>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="achieve-card">
+      <img src="images/achiv4.jpg" alt="">
+      <h3>Global Recognition</h3>
+      <p>International exams & collaborations.</p>
+      <button onclick="openModal('global')">Know More</button>
+    </div>
+
+    <!-- NEW BUTTON -->
+  <div class="view-all">
+    <a href="achivement-details.html" class="view-btn">
+      View All Achievements →
+    </a>
+  </div>
+
+  </div>
+</section>
+
+
+<!-- MODAL -->
+<div id="achievementModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<section class="stats">
+
+  <div class="stat">
+    <h2 class="counter" data-target="10000">0</h2>
+    <p>Patients Treated</p>
+  </div>
+
+  <div class="stat">
+    <h2 class="counter" data-target="500">0</h2>
+    <p>Doctors</p>
+  </div>
+
+  <div class="stat">
+    <h2 class="counter" data-target="50">0</h2>
+    <p>Awards</p>
+  </div>
+
+  <div class="stat">
+    <h2 class="counter" data-target="25">0</h2>
+    <p>Departments</p>
+  </div>
+
+</section>
+
+<section class="timeline">
+
+  <h2 class="section-title">Our Journey</h2>
+
+  <div class="timeline-container">
+
+    <div class="timeline-item">
+      <div class="circle"></div>
+      <div class="content">
+        <h3>2010</h3>
+        <p>College Established with Excellence</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="circle"></div>
+      <div class="content">
+        <h3>2015</h3>
+        <p>Ranked Top Dental College</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="circle"></div>
+      <div class="content">
+        <h3>2022</h3>
+        <p>Advanced Research Center Launched</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="circle"></div>
+      <div class="content">
+        <h3>2025</h3>
+        <p>International Recognition Achieved</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="college-video">
+
+  <h2 class="section-title">Campus Tour</h2>
+
+  <div class="video-wrapper">
+    <iframe 
+      src="https://www.youtube.com/embed/35K1r9SrZms"
+      title="College Video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+</section>
+<section class="updates">
+
+  <h2 class="section-title">Live Updates & Announcements</h2>
+
+  <!-- 🔴 TICKER -->
+  <div class="ticker">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+
+  <!-- 🔘 FILTERS -->
+  <div class="filters">
+    <button onclick="filterUpdates('all')">All</button>
+    <button onclick="filterUpdates('admission')">Admissions</button>
+    <button onclick="filterUpdates('camp')">Camps</button>
+    <button onclick="filterUpdates('event')">Events</button>
+    <button onclick="filterUpdates('notice')">Notices</button>
+  </div>
+
+  <!-- 📦 CARDS -->
+  <div class="updates-grid" id="updatesGrid"></div>
+
+</section>
+
+<!-- 💬 TESTIMONIALS -->
+<section class="reviews-section">
+
+  <h2 class="section-title">What People Say</h2>
+
+  <div class="reviews-wrapper">
+
+    <div class="reviews-slider" id="reviewsSlider">
+
+      <!-- ITEM -->
+      <div class="review-item">
+        <img src="images/user1.jpg" class="review-img">
+        <p>"The doctors were very friendly and explained everything clearly."</p>
+        <h4>Ravi Kumar</h4>
+        <span>Patient • Bangalore</span>
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+
+      <div class="review-item">
+        <img src="images/user2.jpg" class="review-img">
+        <p>"Great faculty and excellent clinical exposure."</p>
+        <h4>Ananya Reddy</h4>
+        <span>Student • Hyderabad</span>
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+      </div>
+
+      <div class="review-item">
+        <img src="images/user3.jpg" class="review-img">
+        <p>"Clean environment and affordable treatment."</p>
+        <h4>Suresh Gowda</h4>
+        <span>Patient • Mysore</span>
+        <div class="review-stars">⭐⭐⭐⭐</div>
+      </div>
+
+    </div>
+
+    <!-- CONTROLS -->
+    <button class="review-btn prev-btn" onclick="slideBack()">❮</button>
+    <button class="review-btn next-btn" onclick="slideForward()">❯</button>
+
+    <!-- DOTS -->
+    <div class="review-dots" id="reviewDotsBox"></div>
+
+  </div>
+
+</section>
+
+<!-- 🤖 CHATBOT -->
+<div id="chatbot">
+  <div id="chatIcon" onclick="toggleChat()">💬</div>
+
+  <div id="chatBox" class="hidden">
+    <h3>Ask Us</h3>
+    <p onclick="reply(this)">How to book appointment?</p>
+    <p onclick="reply(this)">College timings?</p>
+    <p onclick="reply(this)">Location?</p>
+
+    <div id="chatResponse"></div>
+  </div>
+</div>
+
+<footer class="main-footer">
+
+  <div class="footer-container">
+
+    <!-- 🏥 COLLEGE INFO -->
+    <div class="footer-col">
+      <h3>RRDCH</h3>
+      <p>Rajarajeshwari Dental College and Hospital</p>
+      <p>Providing excellence in dental education and world-class patient care.</p>
+    </div>
+
+    <!-- 🔗 QUICK LINKS -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Departments</a></li>
+        <li><a href="#">Admissions</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- 🧑‍⚕️ PATIENT SERVICES -->
+    <div class="footer-col">
+      <h4>Patient Services</h4>
+      <ul>
+        <li><a href="#">Book Appointment</a></li>
+        <li><a href="#">Departments</a></li>
+        <li><a href="#">Live Updates</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </div>
+
+    <!-- 🎓 STUDENT -->
+    <div class="footer-col">
+      <h4>Students</h4>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Syllabus</a></li>
+        <li><a href="#">Schedule</a></li>
+        <li><a href="#">Hostel Complaints</a></li>
+      </ul>
+    </div>
+
+    <!-- 📍 CONTACT -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>📍 Bangalore, Karnataka</p>
+      <p>📞 +91 9876543210</p>
+      <p>✉️ info@rrdch.edu</p>
+
+      <!-- SOCIAL -->
+      <div class="social-icons">
+        <span>🌐</span>
+        <span>📘</span>
+        <span>📸</span>
+        <span>▶️</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 📬 NEWSLETTER -->
+  <div class="newsletter">
+    <input type="email" placeholder="Enter your email">
+    <button>Subscribe</button>
+  </div>
+
+  <!-- 🔻 BOTTOM BAR -->
+  <div class="footer-bottom">
+    <p>© 2026 Rajarajeshwari Dental College and Hospital. All rights reserved.</p>
+  </div>
+
+</footer>
+
+<!-- 📅 APPOINTMENT MODAL -->
+<!-- 📅 APPOINTMENT MODAL -->
+<div id="appointmentModal" class="modal-overlay hidden">
+
+  <div class="modal-box">
+
+    <!-- CLOSE -->
+    <span class="modal-close" onclick="closeModal()">×</span>
+
+    <h2>Book Appointment</h2>
+    <p class="modal-sub">Quick and easy appointment booking</p>
+
+    <!-- FORM -->
+    <div class="form-group">
+      <input type="text" required>
+      <label>Name</label>
+    </div>
+
+    <div class="form-group">
+      <input type="date" required>
+      <label>Select Date</label>
+    </div>
+
+    <div class="form-group">
+      <select required>
+        <option value="">Choose Department</option>
+        <option>Orthodontics</option>
+        <option>Oral Surgery</option>
+        <option>Prosthodontics</option>
+      </select>
+    </div>
+
+    <!-- BUTTON -->
+    <button class="submit-btn" onclick="submitForm()">Confirm Appointment</button>
+
+  </div>
+
+</div>
+
+<!-- 🔔 TOAST -->
+<div id="toast"></div>
+
+<!-- 📍 FOOTER -->
+<footer>
+  <p>© 2026 RRDCH | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oral & Maxillofacial Pathology</title>
+
+<style>
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f4f9fc;
+}
+
+/* HERO */
+.hero {
+  padding: 130px 20px 90px;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 36px;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+/* SECTION */
+.section {
+  margin-bottom: 50px;
+  padding: 35px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 60px rgba(0,119,182,0.15);
+}
+
+/* TITLES */
+.section h2 {
+  color: #0077b6;
+  margin-bottom: 15px;
+  border-left: 5px solid #00b4d8;
+  padding-left: 10px;
+}
+
+/* TEXT */
+.section p {
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* HIGHLIGHT BOX */
+.highlight {
+  background: #eaf6ff;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+/* FACULTY GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* IMAGE */
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Oral & Maxillofacial Pathology</h1>
+</section>
+
+<div class="container">
+
+  <!-- OVERVIEW -->
+  <div class="section">
+    <h2>Overview</h2>
+
+    <p>
+      The Department of <strong>Oral & Maxillofacial Pathology</strong> focuses on the nature, 
+      identification, and management of diseases affecting the oral and maxillofacial regions 
+      as well as associated structures. This specialty represents a confluence of basic sciences 
+      and clinical dentistry.
+    </p>
+
+    <p>
+      Undergraduate and postgraduate students are trained in routine blood and urine analysis 
+      along with histopathological examinations. The department is actively involved in research 
+      including <strong>HIV-AIDS, laser-induced wound healing, karyotyping, molecular studies, 
+      and oral cancer</strong> using advanced immuno-histochemical techniques.
+    </p>
+
+    <div class="highlight">
+      <p>
+        The department houses a modern histopathological and microbiological laboratory equipped 
+        with semi-automatic microtome, tissue processor, research and penta-head microscopes, 
+        along with dedicated labs for UG and PG students.
+      </p>
+
+      <p>
+        A pathology museum with over <strong>2000 histopathology slides and rare specimens</strong> 
+        supports academic learning. Faculty members have contributed to more than 
+        <strong>60 national and international publications</strong> and presented research at 
+        global conferences.
+      </p>
+
+      <p>
+        <strong>Future Plans:</strong> Establishing a Ph.D. center, hosting national conferences, 
+        and developing the department into a diagnostic center for practicing dentists.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- FACULTY -->
+  <div class="section">
+    <h2>Faculty</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <img src="images/default.jpg" alt="">
+        <p>Dr. Girish H.C</p>
+      </div>
+
+      <div class="card">
+        <img src="images/default.jpg" alt="">
+        <p>Dr. Savitha J.K</p>
+      </div>
+
+      <div class="card">
+        <img src="images/default.jpg" alt="">
+        <p>Dr. V K Varsha</p>
+      </div>
+
+      <div class="card">
+        <img src="images/default.jpg" alt="">
+        <p>Dr. Vinay S</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <a href="departments.html" class="back-btn">← Back to Departments</a>
+
+</div>
+
+<script>
+
+/* SCROLL ANIMATION */
+const sections = document.querySelectorAll(".section");
+
+window.addEventListener("scroll", () => {
+  const trigger = window.innerHeight * 0.85;
+
+  sections.forEach(sec => {
+    if (sec.getBoundingClientRect().top < trigger) {
+      sec.classList.add("show");
+    }
+  });
+});
+
+</script>
+
+</body>
+</html>

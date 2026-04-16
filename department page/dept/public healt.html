@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Public Health Dentistry</title>
+
+<style>
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f4f9fc;
+}
+
+/* HERO */
+.hero {
+  padding: 130px 20px 90px;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 38px;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+/* SECTION */
+.section {
+  margin-bottom: 50px;
+  padding: 35px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 60px rgba(0,119,182,0.15);
+}
+
+/* TITLES */
+.section h2 {
+  color: #0077b6;
+  margin-bottom: 15px;
+  border-left: 5px solid #00b4d8;
+  padding-left: 10px;
+}
+
+/* TEXT */
+.section p {
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* HIGHLIGHT BOX */
+.highlight {
+  background: #eaf6ff;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+/* FACULTY GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* LIST */
+.section ul {
+  padding-left: 20px;
+}
+
+.section ul li {
+  margin-bottom: 10px;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Public Health Dentistry</h1>
+</section>
+
+<div class="container">
+
+  <!-- OVERVIEW -->
+  <div class="section">
+    <h2>Overview</h2>
+
+    <p>
+      The Department of <strong>Public Health Dentistry</strong> is dedicated to 
+      meeting the oral health needs of communities that lack access to dental care. 
+      The primary objective is to bring dental health awareness and services to the 
+      larger population through outreach initiatives.
+    </p>
+
+    <p>
+      Through rural dental camps and adopted satellite centres, the department 
+      educates communities using charts, audio-visual aids, and awareness programs. 
+      It also provides dental treatment and referrals to specialized clinics whenever required.
+    </p>
+
+    <div class="highlight">
+      <p>
+        Students gain first-hand experience at the grassroots level, developing 
+        clinical skills and a strong sense of social responsibility by working with 
+        underserved communities.
+      </p>
+
+      <p>
+        The department operates a modern mobile dental clinic that reaches remote 
+        areas, along with four satellite centres providing continuous dental care 
+        to surrounding populations.
+      </p>
+
+      <p>
+        Achievements include university ranks by postgraduate students and the 
+        <strong>Best P.G. Award</strong> won by Dr. Amith Kumar (2013, National Level). 
+        Faculty members have also contributed to several national and international publications.
+      </p>
+
+      <p>
+        <strong>Future Plans:</strong> Collaborations with international NGOs, 
+        organizing postgraduate conventions, and hosting national conferences.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- FACULTY -->
+  <div class="section">
+    <h2>Faculty</h2>
+
+    <div class="grid">
+
+      <div class="card"><img src="images/default.jpg"><p>Dr. C. N. Aruna</p></div>
+      <div class="card"><img src="images/default.jpg"><p>Dr. Padma K. Bhat</p></div>
+      <div class="card"><img src="images/default.jpg"><p>Dr. Prasana Kumar Y.S</p></div>
+      <div class="card"><img src="images/default.jpg"><p>Dr. Shweta Somasundara Y</p></div>
+      <div class="card"><img src="images/default.jpg"><p>Dr. Jayachandra M. Y.</p></div>
+      <div class="card"><img src="images/default.jpg"><p>Dr. Sushma S G</p></div>
+      <div class="card"><img src="images/default.jpg"><p>Dr. Rashmi R</p></div>
+      <div class="card"><img src="images/default.jpg"><p>Dr. R. A. Latha Bai</p></div>
+
+    </div>
+
+  </div>
+
+  <!-- PUBLICATIONS -->
+  <div class="section">
+    <h2>Publications</h2>
+    <p>Publications - Public Health Dentistry</p>
+  </div>
+
+  <!-- FACILITIES -->
+  <div class="section">
+    <h2>Facilities</h2>
+    <p>
+      Mobile dental clinic, satellite centers, community outreach programs, 
+      and modern dental equipment for field and clinical operations.
+    </p>
+  </div>
+
+  <!-- AT A GLANCE -->
+  <div class="section">
+    <h2>At a Glance</h2>
+    <ul>
+      <li>Rural Dental Camps & Outreach Programs</li>
+      <li>Mobile Dental Clinic</li>
+      <li>4 Satellite Centers</li>
+      <li>Community-Based Dental Education</li>
+    </ul>
+  </div>
+
+  <a href="departments.html" class="back-btn">← Back to Departments</a>
+
+</div>
+
+<script>
+
+/* SCROLL ANIMATION */
+const sections = document.querySelectorAll(".section");
+
+window.addEventListener("scroll", () => {
+  const trigger = window.innerHeight * 0.85;
+
+  sections.forEach(sec => {
+    if (sec.getBoundingClientRect().top < trigger) {
+      sec.classList.add("show");
+    }
+  });
+});
+
+</script>
+
+</body>
+</html>

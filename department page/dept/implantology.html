@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Implantology</title>
+
+<style>
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f4f9fc;
+}
+
+/* HERO */
+.hero {
+  padding: 130px 20px 90px;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: 40px;
+}
+
+/* glow */
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 50%;
+  top: -100px;
+  right: -100px;
+  filter: blur(100px);
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+/* SECTION */
+.section {
+  margin-bottom: 50px;
+  padding: 35px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 60px rgba(0,119,182,0.15);
+}
+
+/* TITLE */
+.section h2 {
+  color: #0077b6;
+  margin-bottom: 15px;
+  border-left: 5px solid #00b4d8;
+  padding-left: 10px;
+}
+
+/* TEXT */
+.section p {
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+/* LIST */
+.section ul {
+  padding-left: 20px;
+}
+
+.section ul li {
+  margin-bottom: 10px;
+}
+
+/* HIGHLIGHT BOX */
+.highlight-box {
+  margin-top: 20px;
+  padding: 20px;
+  background: #eaf6ff;
+  border-radius: 15px;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(0,119,182,0.3);
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Implantology</h1>
+</section>
+
+<div class="container">
+
+  <!-- OVERVIEW -->
+  <div class="section">
+    <h2>Overview</h2>
+
+    <p>
+      Implantology is an emerging super speciality in dentistry functioning as an 
+      independent department with specialists from co-specialties. In addition to 
+      conducting a one-year <strong>Rajiv Gandhi University of Health Sciences certificate programme</strong>, 
+      the department provides permanent solutions for prematurely lost teeth.
+    </p>
+
+    <p>
+      The department is fully equipped with the latest implant surgical kits, 
+      physio dispenser systems, and advanced surgical equipment, ensuring 
+      high standards of patient care and clinical excellence.
+    </p>
+
+    <!-- SERVICES -->
+    <div class="highlight-box">
+      <h3 style="color:#0077b6; margin-bottom:10px;">Patient Services</h3>
+
+      <ul>
+        <li>Single and Multiple Tooth Replacement</li>
+        <li>Implant Supported Dentures</li>
+        <li>All-on Concept Full Arch Implants</li>
+        <li>Full Mouth Rehabilitation</li>
+        <li>Sinus Lift Procedures & Zygomatic Implants</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <a href="departments.html" class="back-btn">← Back to Departments</a>
+
+</div>
+
+<script>
+
+/* SCROLL ANIMATION */
+const sections = document.querySelectorAll(".section");
+
+window.addEventListener("scroll", () => {
+  const trigger = window.innerHeight * 0.85;
+
+  sections.forEach(sec => {
+    if (sec.getBoundingClientRect().top < trigger) {
+      sec.classList.add("show");
+    }
+  });
+});
+
+</script>
+
+</body>
+</html>

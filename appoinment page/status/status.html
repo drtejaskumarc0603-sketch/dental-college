@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment Confirmed</title>
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- ✅ SUCCESS HEADER -->
+  <div class="success">
+    <i class="fas fa-check-circle checkmark"></i>
+    <h1>Appointment Confirmed!</h1>
+    <p>Your appointment has been successfully scheduled.</p>
+  </div>
+
+  <!-- 📋 DETAILS CARD -->
+  <div class="card">
+    <h2>Appointment Details</h2>
+
+    <div class="details">
+      <div class="item"><i class="fas fa-user"></i> <span id="name">Ravi Biradar</span></div>
+      <div class="item"><i class="fas fa-calendar"></i> <span id="date">20 April 2026</span></div>
+      <div class="item"><i class="fas fa-clock"></i> <span id="time">10:30 AM</span></div>
+      <div class="item"><i class="fas fa-user-md"></i> <span id="doctor">Dr. Sharma</span></div>
+      <div class="item"><i class="fas fa-hashtag"></i> <span id="id">APT12345</span></div>
+    </div>
+  </div>
+
+  <!-- 📌 INSTRUCTIONS -->
+  <div class="card">
+    <h2>Instructions</h2>
+    <ul>
+      <li>Arrive 10 minutes early</li>
+      <li>Bring valid ID</li>
+      <li>Carry previous medical records</li>
+    </ul>
+  </div>
+
+  <!-- 📍 LOCATION -->
+  <div class="card location">
+    <h2>Hospital Location</h2>
+  <iframe 
+  src="https://maps.google.com/maps?q=Rajarajeshwari%20Dental%20College%20Bangalore&z=15&output=embed"
+  width="100%"
+  height="220"
+  style="border-radius:15px; border:none;">
+</iframe>
+    <button class="btn primary" onclick="getDirections()">Get Directions</button>
+  </div>
+
+  <!-- 🔘 ACTION BUTTONS -->
+  <div class="actions">
+    <button class="btn" onclick="goHome()">Home</button>
+    <button class="btn primary" onclick="reschedule()">re appointment</button>
+    <button class="btn danger" onclick="cancel()">Cancel</button>
+    <button class="btn" onclick="downloadReceipt()">Download Receipt</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

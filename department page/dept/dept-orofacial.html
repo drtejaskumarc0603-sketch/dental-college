@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oral Medicine & Radiology</title>
+
+<style>
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f4f9fc;
+}
+
+/* 🔥 HERO (COLORED + PREMIUM) */
+.hero {
+  padding: 120px 20px 80px;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  opacity: 0.9;
+}
+
+/* MAIN CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 20px;
+}
+
+/* SECTION BLOCK */
+.section {
+  margin-bottom: 50px;
+  padding: 30px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s;
+}
+
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* TITLES */
+.section h2 {
+  color: #0077b6;
+  margin-bottom: 15px;
+  border-left: 5px solid #00b4d8;
+  padding-left: 10px;
+}
+
+/* TEXT */
+.section p {
+  line-height: 1.8;
+  color: #444;
+}
+
+/* LIST */
+.section ul {
+  padding-left: 20px;
+}
+
+.section ul li {
+  margin-bottom: 10px;
+}
+
+/* GRID FOR FACULTY */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.grid div {
+  background: #f1f8ff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Oral Medicine & Radiology</h1>
+  <p>Comprehensive Diagnosis & Advanced Imaging</p>
+</section>
+
+<div class="container">
+
+  <!-- OVERVIEW -->
+  <div class="section">
+    <h2>Overview</h2>
+    <p>
+The department of oral medicine and radiology is the threshold to dentistry for all patients. This department is responsible for the preliminary investigation and diagnosis of dental issues, lesions and systemic diseases through oral manifestations. The department also takes responsibility for the dental management of medically compromised patients.
+
+This department is where students, both at the UG and PG level, gain the ability to examine patients, diagnose issues and practice the clinical skills, vital to good dentistry. The department has a separate radiology section with advanced diagnostic aids such as a cephalostat and orthopantomograph, T-Scan, digital OPG, RVG and Extra Oral X-ray unit. Patient management is done through a system of computerized records.
+    </p>
+
+    <p>
+    Students have access to a large number of reference books, educational CDs and online resources through LAN and WiFi. The department has the distinction of being the first in India to be equipped with a full-fledged T-Scan with biopack at its Orthofacial pain clinic. The teaching faculty are excellent academicians with several national and international Publications to their credit. Future Plans include acquisition of CBCT, making the department a Ph.D center and to start oral cancer research center. </p>
+  </div>
+
+  <!-- FACULTY -->
+  <div class="section">
+    <h2>Faculty</h2>
+
+    <div class="grid">
+      <div>Dr. Poornima. C</div>
+      <div>Dr. Balaji. P</div>
+      <div>Dr. M. B. Sowbhagya</div>
+      <div>Dr. Poornima. G</div>
+      <div>Dr. Mahesh Kumar T. S.</div>
+      <div>Dr. Prarthana G. A</div>
+      <div>Dr. Anuroopa R</div>
+    </div>
+
+  </div>
+
+  <!-- PUBLICATIONS -->
+  <div class="section">
+    <h2>Publications</h2>
+    <p>Publications - Oral Medicine</p>
+  </div>
+
+  <!-- FACILITIES -->
+  <div class="section">
+    <h2>Facilities</h2>
+    <p>
+      Advanced diagnostic systems, digital imaging units, research tools,
+      and modern clinical setups supporting patient care and education.
+    </p>
+  </div>
+
+  <!-- AT A GLANCE -->
+  <div class="section">
+    <h2>At a Glance</h2>
+    <ul>
+      <li>Advanced Radiology Equipment</li>
+      <li>Digital Patient Records</li>
+      <li>Research-Oriented Department</li>
+      <li>Experienced Faculty</li>
+    </ul>
+  </div>
+
+  <a href="../department.html" class="back-btn">← Back</a>
+
+</div>
+
+<script>
+
+/* SCROLL ANIMATION */
+const sections = document.querySelectorAll(".section");
+
+window.addEventListener("scroll", () => {
+  const trigger = window.innerHeight * 0.85;
+
+  sections.forEach(sec => {
+    if (sec.getBoundingClientRect().top < trigger) {
+      sec.classList.add("show");
+    }
+  });
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+/* 🌍 GLOBAL */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #e6f4ff, #ffffff);
+}
+
+/* CONTAINER */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+/* SUCCESS */
+.success i {
+  font-size: 70px;
+  color: #2ecc71;
+  animation: pop 0.5s ease;
+}
+
+.success h1 {
+  color: #0077b6;
+}
+
+/* CARD */
+.card {
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: left;
+  animation: slideUp 0.7s ease;
+}
+
+/* DETAILS */
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.item i {
+  color: #0077b6;
+}
+
+/* INSTRUCTIONS */
+ul {
+  padding-left: 20px;
+  color: #444;
+}
+
+/* MAP */
+.location iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  border: none;
+  margin: 10px 0;
+}
+
+/* BUTTONS */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background: #e0f0ff;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.primary {
+  background: #0077b6;
+  color: white;
+}
+
+.danger {
+  background: #ff4d4d;
+  color: white;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+
+@keyframes slideUp {
+  from {transform: translateY(30px); opacity:0;}
+  to {transform: translateY(0); opacity:1;}
+}
+
+@keyframes pop {
+  from {transform: scale(0);}
+  to {transform: scale(1);}
+}
+
+/* RESPONSIVE */
+@media(max-width: 600px){
+  .details {
+    grid-template-columns: 1fr;
+  }
+}
